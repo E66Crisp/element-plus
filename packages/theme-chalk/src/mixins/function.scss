@@ -97,3 +97,8 @@
 
   @return rgba($r, $g, $b, $a);
 }
+
+// Mix overlay color to avoid overlay issues
+@function mix-overlay-color($color, $bg-color) {
+  @return color.mix($color, $bg-color);
+}

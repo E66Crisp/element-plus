@@ -12,7 +12,6 @@
   "dependencies": {
     "@ctrl/tinycolor": "catalog:",
     "@element-plus/constants": "workspace:^",
-    "@element-plus/directives": "workspace:^",
     "@element-plus/hooks": "workspace:^",
     "@element-plus/icons-vue": "catalog:",
     "@element-plus/utils": "workspace:^",

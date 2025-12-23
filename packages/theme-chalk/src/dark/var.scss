@@ -4,7 +4,6 @@
 
 @use '../common/var.scss' as common;
 @use '../mixins/mixins.scss' as *;
-@use '../color/index.scss' as *;
 @use '../mixins/function.scss' as *;
 
 $colors: () !default;

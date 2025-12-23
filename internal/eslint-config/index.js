@@ -543,7 +543,6 @@ export default defineConfig([
       'docs/components.d.ts',
       'coverage',
       'play',
-      'ssr-testing/cases/*',
       'docs/.vitepress/i18n/*',
       'docs/.vitepress/cache/*',
       'docs/.vitepress/crowdin/*',

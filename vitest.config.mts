@@ -23,7 +23,6 @@ export default defineConfig({
         '**/lang/**',
         'packages/components/*/style/**',
         'scripts/**',
-        'ssr-testing/**',
       ],
     },
   },
