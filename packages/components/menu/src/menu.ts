@@ -267,9 +267,10 @@ export default defineComponent({
             ? items.value[activeIndex.value]
             : null
 
-        openedMenus.value = openedMenus.value.filter((menuIndex: string) =>
-          indexPath.includes(menuIndex) ||
-          activeItem?.indexPath.includes(menuIndex)
+        openedMenus.value = openedMenus.value.filter(
+          (menuIndex: string) =>
+            indexPath.includes(menuIndex) ||
+            activeItem?.indexPath.includes(menuIndex)
         )
       }
       openedMenus.value.push(index)
@@ -544,21 +545,21 @@ export default defineComponent({
 
       const directives: DirectiveArguments = props.closeOnClickOutside
         ? [
-          [
-            vClickoutside,
-            () => {
-              if (!openedMenus.value.length) return
+            [
+              vClickoutside,
+              () => {
+                if (!openedMenus.value.length) return
 
-              if (!mouseInChild.value) {
-                openedMenus.value.forEach((openedMenu) =>
-                  emit('close', openedMenu, getIndexPath(openedMenu))
-                )
+                if (!mouseInChild.value) {
+                  openedMenus.value.forEach((openedMenu) =>
+                    emit('close', openedMenu, getIndexPath(openedMenu))
+                  )
 
-                openedMenus.value = []
-              }
-            },
-          ],
-        ]
+                  openedMenus.value = []
+                }
+              },
+            ],
+          ]
         : []
 
       const vMenu = withDirectives(
